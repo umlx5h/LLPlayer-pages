@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LLPlayer - The media player for language learning</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The media player for language learning, with dual subtitles, AI-generated subtitles, realtime-OCR, translation, word lookup, and more!"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css "
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" />
+    <link
+      rel="icon"
+      href="images/favicon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <div class="navbar-left">
+          <img src="images/logo.png" alt="App Logo" class="logo-img" />
+          <a href="#" class="logo-text">LLPlayer</a>
+        </div>
+        <div class="navbar-right">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#download">Download</a></li>
+            <li>
+              <a
+                href="https://github.com/umlx5h/LLPlayer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-github"></i>
+                GitHub
+              </a>
+            </li>
+          </ul>
+          <div
+            class="hamburger"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            role="button"
+            tabindex="0"
+          >
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>The media player for language learning</h1>
+        <p>
+          The media player for language learning, with dual subtitles,
+          AI-generated subtitles, realtime-OCR, translation, word lookup, and
+          more!
+        </p>
+
+        <a href="#download" class="btn primary-btn">Download Now</a>
+
+        <div class="hero-image">
+          <img src="images/top.png" width="100%" alt="Hero Image" />
+        </div>
+
+        <a
+          class="hero-image-link"
+          href="https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux"
+          target="_blank"
+          >TED Talk - The mind behind Linux</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Features</h2>
+
+        <p class="feature-title">
+          Unlike normal media players, LLPlayer has many unique subtitle-related
+          features mainly to support language learning.
+        </p>
+
+        <div class="feature-cards">
+          <div class="card">
+            <div>
+              <i class="bi bi-badge-cc"></i>
+              <i class="bi bi-badge-cc-fill"></i>
+            </div>
+
+            <h3 id="feature-dual-subs">Dual Subtitles</h3>
+            <p>
+              LLPlayer supports dual subtitles, two languages can be displayed
+              simultaneously.<br />
+              The size and positioning can be adjusted regardless of
+              <b>text</b> or <b>bitmap</b> format.<br />
+
+              Unlike other players, the two subtitles never overlap.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-ear"></i>
+            <h3 id="feature-asr">AI-generated subtitles</h3>
+            <p>
+              Powered by
+              <a href="https://github.com/openai/whisper" target="_blank"
+                >OpenAI Whisper</a
+              >, LLPlayer supports real-time automatic subtitle generation (ASR)
+              from any video and audio, which supports <b>100</b> languages.
+              <br />
+              It is efficient because subtitles can be generated from
+              <b>any position</b> in the video <b>asynchronously</b>.<br />
+              It also supports <b>CUDA</b>, <b>Vulkan</b>, <b>OpenVINO</b> for
+              fast subtitle generation.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-translate"></i>
+            <h3 id="feature-translate">Real-time Translation</h3>
+            <p>
+              LLPlayer supports real-time translation of subtitles.<br />It
+              supports <b>Google Translate</b> and <b>DeepL</b>.<br />Currently
+              <b>134</b> languages are supported!
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-file-word"></i>
+            <h3 id="feature-ocr">OCR Subtitles</h3>
+            <p>
+              Bitmap format subtitles cannot normally be recognized as text,<br />but
+              LLPlayer can convert bitmap subtitles to text in real-time using
+              OCR.<br />
+              Unlike usual programs, it uses ffmpeg native API directly and is
+              therefore very fast.<br />
+              It supports
+              <a
+                href="https://github.com/tesseract-ocr/tesseract"
+                target="_blank"
+                >TesseractOCR</a
+              >
+              and MicrosoftOCR.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-play-circle"></i>
+            <h3 id="feature-play-anything">Plays anything</h3>
+            <p>
+              LLPlayer supports many video and subtitle formats, thanks to
+              <a href="https://ffmpeg.org/" target="_blank">ffmpeg</a> and
+              <a href="https://github.com/SuRGeoNix/Flyleaf" target="_blank"
+                >Flyleaf</a
+              >
+              libraries.<br />It supports <b>text</b> and
+              <b>bitmap</b> subtitles, as well as built-in and external
+              subtitles.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-search"></i>
+            <h3 id="feature-word-lookup">Instant word lookup</h3>
+            <p id="feature">
+              By clicking on a word in the subtitle, the meaning of the word can
+              be displayed in a pop-up window.<br />
+              You can search on any website or copy it to the clipboard.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-layout-sidebar-inset-reverse"></i>
+            <h3 id="feature-sub-sidebar">Subtitles Sidebar</h3>
+            <p>
+              LLPlayer supports a subtitles sidebar.<br />Supports
+              <b>text</b> and <b>bitmap</b> subtitles.<br />You can seek and
+              look up the meaning of words.<br />
+              It will also have an <b>anti-spoiler</b> feature.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-youtube"></i>
+            <h3 id="feature-online">Plays online videos</h3>
+            <p>
+              With
+              <a href="https://github.com/yt-dlp/yt-dlp" target="_blank"
+                >yt-dlp</a
+              >, online videos such as YouTube can be played in real-time.<br />
+              <b>Automatic subtitle generation</b> and <b>translation</b> can
+              also be performed in real time.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="bi bi-github"></i>
+            <h3 id="feature-oss">Free, Open Source, Written in C#</h3>
+            <p>
+              The source of LLPlayer is available on GitHub under the GPL
+              licence and can be customized freely.<br />
+              All code is written in <b>C#</b>, making it easy to customize for
+              anyone needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Features Section -->
+    <section id="more-features" class="more-features">
+      <div class="container">
+        <h2>More features</h2>
+        <ul>
+          <li>Flexible Subtitles Size/Placement Settings</li>
+          <li>Subtitles Seeking for any format</li>
+          <li>Built-in Subtitles Downloader</li>
+          <li>Customizable Dark Theme</li>
+          <li>Fully Customizable Shortcuts</li>
+          <li>Built-in Cheat Sheet</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+      <div id="image-carousel" class="container splide">
+        <h2>Screenshots</h2>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="images/screenshot-player.png" alt="Player" />
+            </li>
+            <li class="splide__slide">
+              <img src="images/screenshot-cheatsheet.png" alt="CheatSheet" />
+            </li>
+            <li class="splide__slide">
+              <img src="images/screenshot-settings.png" alt="Settings Key" />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="images/screenshot-subtitle-downloader.png"
+                alt="Subtitles Downloader"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+      <div class="container">
+        <h2>Download</h2>
+
+        <p class="download-title">
+          LLPlayer is currently available only for Windows. The source code is
+          available on GitHub.
+        </p>
+
+        <div class="download-buttons">
+          <a
+            href="https://github.com/umlx5h/LLPlayer/releases"
+            target="_blank"
+            class="btn primary-btn"
+            >Windows</a
+          >
+
+          <a
+            href="https://github.com/umlx5h/LLPlayer"
+            target="_blank"
+            class="btn secondary-btn"
+          >
+            <i class="bi bi-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 llplayer.com</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const overlay = document.querySelector(".overlay");
+
+      if (hamburger) {
+        // Execute only if hamburger menu exists
+        hamburger.addEventListener("click", () => {
+          const isActive = navLinks.classList.toggle("active");
+          overlay.classList.toggle("active");
+          hamburger.setAttribute("aria-expanded", isActive);
+          hamburger.setAttribute(
+            "aria-label",
+            isActive ? "Close Menu" : "Open Menu",
+          );
+        });
+
+        // Enable keyboard operation
+        hamburger.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            hamburger.click();
+          }
+        });
+
+        // Clicking on the overlay closes the menu.
+        if (overlay) {
+          overlay.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            overlay.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", false);
+            hamburger.setAttribute("aria-label", "Open Menu");
+          });
+        }
+      }
+
+      new Splide("#image-carousel").mount();
+    </script>
+  </body>
+</html>
