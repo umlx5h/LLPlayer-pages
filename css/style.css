@@ -21,6 +21,25 @@ body {
   line-height: 1.6;
 }
 
+.demo {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #333333;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+}
+
+.demo h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: #ff4081;
+}
+
+.demo video {
+  width: 90%;
+}
+
 a {
   color: #00bcd4;
 }
