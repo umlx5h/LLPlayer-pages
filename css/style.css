@@ -222,9 +222,8 @@ a {
 
 .more-features {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background-color: #333333;
-
   padding: 3rem 1rem;
   border-radius: 1rem;
 }
@@ -232,13 +231,20 @@ a {
 .more-features h2 {
   font-size: 2.5rem;
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   color: #ff4081;
+}
+
+.more-features ul {
+  column-count: 2;
+
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 .more-features li {
   list-style: none;
-  margin-bottom: 1.4rem;
+  margin-bottom: 3rem;
 }
 
 .feature-title {
@@ -435,6 +441,12 @@ footer {
 
   .hamburger {
     display: block; /* View hamburger on mobile */
+  }
+
+  .more-features ul {
+    -webkit-column-count: unset;
+    -moz-column-count: unset;
+    column-count: unset;
   }
 
   /* Navigation Links */
